@@ -1,0 +1,116 @@
+﻿﻿/*
+Theme Name: pure txt
+Description: 3rd theme.
+Author: Zixing8284
+Author URI: http://starryspots.blogcn.com
+Theme URI: http://starryspots.blogcn.com
+Version: 1.0
+Tags: white, two-column
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+html {
+	margin: 0;
+	padding: 0;
+	}
+body {
+	width: auto;
+	margin: 20px 26px 20px 30px;
+	font-family: "微软雅黑", "Times New Roman", Helvetica;
+	font-size: 12px;
+	color: #666;
+	text-align: left;
+	}
+a {
+	color:#000;
+	text-decoration: none;
+	}
+blockquote {
+	margin: 15px 30px 15px 10px;
+	padding-left: 15px;
+	border-left: 1px dashed #CCC;
+	color: #3875b8;
+	}
+::selection {
+	background: #FFFDC6;
+	color: #666;
+	}
+header#header h1 {
+	margin-bottom: 9px;
+	font-family: "Microsoft Yahei";
+	font-weight: normal;
+	font-size: 20px;
+	letter-spacing: 0.2em;
+	}
+header#header aside {
+	margin: 0 3px;
+	letter-spacing: 0.1em;
+	line-height: 160%;
+	}
+section#content {
+	min-width: 150px;
+	float: left;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	width: 76%;
+	}
+section#content h3 {
+	margin: 0px 1px 20px -12px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666;
+	letter-spacing: 0.2em;
+	}
+section#content h2 {
+	margin-left: -10px;
+	font-size: 16px;
+	font-weight: normal;
+	letter-spacing: 0.2em;
+	}
+.post {
+	margin-bottom: 20px;
+	}
+.post p{
+	line-height: 1.6em;
+	}
+#clear {
+	clear: both;
+	padding: 5px;
+	margin-bottom: 10px;
+	}
+section#content aside {
+	margin-bottom: 30px;
+	}
+section#sidebar {
+	margin-top: 0px;
+	width: 21%;
+	float: right;
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	line-height: 175%;
+	}
+footer#footer {
+	width: 76%;
+	clear: both;
+	padding-top: 4px;
+	border-top: 1px solid #CCC;
+	font-size: 12px;
+	color: #999;
+	}
+img {
+	border: 1px solid #2c2c2c;
+	clear: both;
+	display: run-in;
+	margin-left: auto;
+	margin-right :auto;
+	padding: 6px;
+	border-radius: 8px;
+	}
+.wp-smiley {
+	display: inline;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	}

@@ -1,0 +1,38 @@
+// n is number of stars required
+
+@function multiple-text-shadow($n)
+	$value: '#{random(2000)}px #{random(2000)}px 1px magenta'
+	@for $i from 2 through $n
+		$value: '#{$value}, #{random(2000)}px #{random(2000)}px 1px magenta'
+
+	@return unquote($value)
+
+$shadows-small: multiple-text-shadow(100)
+$shadows-medium: multiple-text-shadow(300)
+$shadows-big: multiple-text-shadow(500)
+
+#stars
+	width: 3px
+	height: 3px
+	color: bisque
+	background: transparent
+	position: relative
+	text-shadow: $shadows-small
+	animation: animStar 20s linear infinite
+	opacity: 50%
+
+	&:after
+		content: "✦"
+		position: absolute
+		color: bisque
+		left: -2000px
+		width: 4px
+		height: 4px
+		background: transparent
+		text-shadow: $shadows-big
+
+@keyframes animStar
+	from
+		transform: translateX(0px) translateY(0px)
+	to
+		transform: translateX(2000px) translateY(20px)
