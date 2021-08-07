@@ -90,6 +90,7 @@ h1.cover-heading {
   body {
     background: url(2.jpg) no-repeat;
     background-size: cover;
+    background-position: center center;
   }
   .site-wrapper {
     color: #fdfdfd;
