@@ -50,7 +50,7 @@ h1.cover-heading {
   border-radius: 46%;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: url(6228479.jpg) no-repeat;
+  background: url(6228479-min.jpeg) no-repeat;
   background-size: cover;
   color: rgba(1,1,1, 0);
   white-space: nowrap;
@@ -88,7 +88,7 @@ h1.cover-heading {
     color: #fdfdfd;
   }
   body {
-    background: url(2.jpg) no-repeat;
+    background: url(2-min.jpeg) no-repeat;
     background-size: cover;
     background-position: center center;
   }
@@ -99,7 +99,6 @@ h1.cover-heading {
     text-shadow: 0px 1px 1px rgba(0,0,0,0.2);
     background: url(raster.png) repeat;
     background-color: rgba(1, 1, 1, 0.3);
-    /*border: 0.61em solid #111111;*/
     border-top: 2.61em solid #111111;
     border-bottom: 2.61em solid #111111;
     border-left: 0.39em solid #111111;
