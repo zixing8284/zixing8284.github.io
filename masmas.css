@@ -1,41 +1,42 @@
 @charset "utf-8";
-a,
-a:focus,
-a:hover {
-  color: #111111;
-  text-decoration: none;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-::selection {
-  background: #111111;
-  color: #fff;
-}
-html,
-body {
-  height: 100%;
+html {
+  color: #111;
   background-color: #fdfdfd;
 }
 body {
-  font-family: 'The Girl Next Door', cursive, '微软雅黑';
-  color: #111111;
   text-align: center;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+a,
+a:focus,
+a:hover {
+  color: #111;
+  text-decoration: none;
+}
+::selection {
+  background: #111;
+  color: #fff;
 }
 h3 {
   word-wrap: break-word;
 }
+.lead {
+  margin-bottom: 20px;
+}
 .site-wrapper {
-  display: table;
   width: 100%;
   height: 100%;
-  /* Firefox */
-  min-height: 100%;
-}
-.site-wrapper .site-wrapper-inner {
-  display: table-cell;
-  vertical-align: middle;
-}
-.site-wrapper .site-wrapper-inner .cover-container {
-  margin-right: auto;
-  margin-left: auto;
 }
 .inner {
   padding: 30px;
@@ -47,69 +48,64 @@ h1.cover-heading {
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  border-radius: 46%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background: url(6228479-min.jpeg) no-repeat;
+  background: url(brand.jpeg) no-repeat;
   background-size: cover;
-  color: rgba(1,1,1, 0);
+  color: rgba(1, 1, 1, 0);
   white-space: nowrap;
   font-size: 10px;
 }
 .icon {
-  color: #fdfdfd;
+  background: #111;
   cursor: pointer;
-  font-size: 16px;
   padding: 10px;
-  background: #0d0d0d;
 }
 .icon a {
   color: #fdfdfd;
   text-decoration: none;
-  transition: all 0.7s ease;
-  -webkit-transition: all 0.7s ease;
-  -moz-transition: all 0.7s ease;
-  -ms-transition: all 0.7s ease;
-  -o-transition: all 0.7s ease;
 }
 .icon a:hover {
-  color: #a51f0f !important;
+  color: #a51f0f;
 }
 .cover {
   padding: 0 20px;
 }
-.mastfoot {
-  color: #787878;
-}
 @media (min-width: 768px) {
+  .masthead-nav > li > a {
+    color: #fdfdfd;
+  }
+  .mastfoot {
+    position: absolute;
+    bottom: 0;
+    color: #fdfdfd;
+  }
+  .lead {
+    font-size: 20px;
+  }
   a,
   a:focus,
   a:hover {
     color: #fdfdfd;
   }
   body {
-    background: url(2-min.jpeg) no-repeat;
+    background: url(bg-min.jpeg) no-repeat;
     background-size: cover;
     background-position: center center;
+    text-align: left;
   }
   .site-wrapper {
     color: #fdfdfd;
-    font-size: 16px;
-    line-height: 24px;
-    text-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+    display: flex;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
     background: url(raster.png) repeat;
     background-color: rgba(1, 1, 1, 0.3);
-    border-top: 2.61em solid #111111;
-    border-bottom: 2.61em solid #111111;
-    border-left: 0.39em solid #111111;
-    border-right: 0.39em solid #111111;
+    border: 2.61em solid #111;
+    border-width: 2.61em 0.39em;
   }
-  .site-wrapper .site-wrapper-inner {
-    vertical-align: middle;
-    padding-top: 8em;
+  .site-wrapper-inner {
+    margin: auto;
+    width: 640px;
   }
   .masthead-brand {
-    float: left;
     display: none;
   }
   .masthead-nav {
@@ -120,37 +116,7 @@ h1.cover-heading {
     border-bottom: 3px solid;
     border-bottom-color: #a51f0f;
     padding-bottom: 20px;
-    /*letter-spacing: 5px;*/
     font-size: 48px;
     font-weight: 700;
-  }
-}
-@media (min-width: 768px) {
-  .masthead-nav > li > a {
-    color: #fdfdfd;
-  }
-  .navbar {
-    border-radius: 0px !important;
-  }
-  .masthead {
-    position: absolute;
-    top: 0;
-  }
-  .mastfoot {
-    position: absolute;
-    bottom: 0;
-    color: #fdfdfd;
-  }
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 800px;
   }
 }
