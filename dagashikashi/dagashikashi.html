@@ -1,309 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    >
     <title>シカダ駄菓子店のホームページ（仮）です。豊富な品揃えを心掛けております。</title>
-    <link rel="stylesheet" type="text/css" href="star.css">
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="star.css"
+    >
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background: url(./paopao.webp) no-repeat center center;
+            background-size: cover;
+        }
+
+        html,
+        body {
+            margin: 0 auto;
+            font-size: calc(1vw + 1vh + .5vmin);
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .dagashi {
+            text-align: center;
+            color: green;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .dagashi>aside {
+            letter-spacing: -.2em;
+            text-shadow: none;
+            color: black;
+            font-size: x-small;
+        }
+
+        .dagashi>div:nth-of-type(1) {
+            text-shadow:
+                yellow -3px -3px 0px,
+                yellow 2px 2px 0px,
+                lightcoral 8px 5px 0px,
+                hotpink 6px 3px 0px,
+                pink 3px 1px 0px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            font-size: 4.5em;
+        }
+
+        .dagashi>div:nth-of-type(2) {
+            text-shadow:
+                yellow -3px -3px 0px,
+                yellow 2px 2px 0px,
+                lightcoral 8px 5px 0px,
+                hotpink 6px 3px 0px,
+                pink 3px 1px 0px;
+            font-weight: 900;
+            font-size: 3em;
+            margin-top: -1.2em;
+        }
+
+        .banana {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 100;
+            display: grid;
+            grid-template-columns: repeat(10, 10%);
+            grid-template-rows: repeat(10, 10%);
+        }
+
+        .banana .star {
+            position: relative;
+        }
+
+        .banana .star::before {
+            content: "✦✧✨";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            background: transparent;
+            transform: scale3d(0, 0, 1);
+            transition: .5s visibility ease, .5s transform ease-in-out, .5s background ease-in-out;
+            visibility: hidden;
+            background-image: linear-gradient(to right, green, linen, indianred, lemonchiffon);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-size: 200% 100%;
+            animation: letsgo 2s infinite linear;
+        }
+
+        .banana .star:hover::before {
+            visibility: visible;
+            transform: scale3d(1, 1, .5) rotate(46deg);
+            transition: 0s transform;
+        }
+
+        @keyframes letsgo {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -100% 0;
+            }
+        }
+
+        .banana .star:hover::first-line {
+            color: lightcoral;
+            text-shadow: yellow -3px -3px 1px;
+        }
+
+        .shikada {
+            width: 100%;
+            text-shadow: none;
+            height: 3em;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 101;
+            white-space: nowrap;
+            word-break: keep-all;
+            margin-top: -.5em;
+        }
+
+        .shikada .apple {
+            display: inline-block;
+            width: 33.3%;
+        }
+
+        .shikada .apple a {
+            color: white;
+            letter-spacing: -1px;
+            -webkit-text-stroke: 1px black;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .shikada .apple a::before {
+            z-index: 2;
+            font-size: 1em;
+        }
+
+        .apple1 a::before {
+            content: "⌂";
+        }
+
+        .shikada .apple2 a::before {
+            content: "🞔";
+        }
+
+        .apple3 a::before {
+            content: "✉";
+        }
+
+        .gulugulu {
+            white-space: nowrap;
+            padding: .4em;
+            position: relative;
+            display: inline-block;
+            width: 200%;
+            animation: 7s hotaru linear infinite normal;
+        }
+
+        .gachagacha {
+            animation: 6s hotaru linear infinite normal;
+        }
+
+        @keyframes hotaru {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+
+        .gulugulu h4,
+        .gulugulu h3,
+        .gulugulu h2,
+        .gulugulu h1 {
+            overflow: hidden;
+            display: inline-block;
+            /*float: left;*/
+        }
+
+        .gulugulu h4 {
+            width: 10%;
+        }
+
+        .gulugulu h3 {
+            width: 10%;
+        }
+
+        .gulugulu h2 {
+            width: 12.5%;
+        }
+
+        .gulugulu h1 {
+            width: 16.6%;
+        }
+
+        .gulugulu h4:nth-child(1),
+        .gulugulu h4:nth-child(6),
+        .gulugulu h3:nth-child(2),
+        .gulugulu h3:nth-child(7),
+        .gulugulu h2:nth-child(1),
+        .gulugulu h2:nth-child(7),
+        .gulugulu h1:nth-child(3),
+        .gulugulu h1:nth-child(7) {
+            color: hotpink;
+        }
+
+        .gulugulu h4:nth-child(2),
+        .gulugulu h4:nth-child(7),
+        .gulugulu h3:nth-child(3),
+        .gulugulu h3:nth-child(8),
+        .gulugulu h2:nth-child(2),
+        .gulugulu h2:nth-child(8),
+        .gulugulu h1:nth-child(4),
+        .gulugulu h1:nth-child(1) {
+            color: purple;
+        }
+
+        .gulugulu h4:nth-child(3),
+        .gulugulu h4:nth-child(8),
+        .gulugulu h3:nth-child(4),
+        .gulugulu h3:nth-child(10),
+        .gulugulu h2:nth-child(6),
+        .gulugulu h1:nth-child(5) {
+            color: firebrick;
+        }
+
+        .gulugulu h4:nth-child(4),
+        .gulugulu h4:nth-child(10),
+        .gulugulu h3:nth-child(5),
+        .gulugulu h2:nth-child(4) {
+            color: gold;
+        }
+
+        .gulugulu h2:nth-child(3),
+        .gulugulu h1:nth-child(2) {
+            color: mediumturquoise;
+        }
+
+        .gulugulu *::after {
+            content: "🟄";
+            color: bisque;
+            position: absolute;
+            /*font-size: 1px;*/
+            font-size: xx-small;
+            top: 3px;
+            width: 4px;
+            height: 4px;
+            text-shadow: 4px 4px magenta, -32px -55px 1px antiquewhite, -22px -100px magenta, -88px -66px antiquewhite, 467px 187px darkred, 264px 943px magenta, 877px 783px magenta, 165px 315px magenta, 1990px 757px magenta, 1557px 1040px magenta, 581px 612px magenta, 183px 1014px magenta, 59px 1691px magenta;
+            animation: backorai 8s linear infinite;
+        }
+
+        @keyframes backorai {
+            0% {
+                transform: translateX(0px) translateY(0px);
+            }
+
+            50% {
+                transform: translateX(1000px) translateY(-20px);
+
+            }
+
+            100% {
+                transform: translateX(2000px) translateY(0px);
+            }
+        }
+
+        .owari {
+            position: relative;
+            letter-spacing: -.1em;
+            overflow: hidden;
+        }
+
+        .footer {
+            position: relative;
+            height: inherit;
+            text-shadow: none;
+            color: black;
+            font-size: x-small;
+            font-weight: 550;
+            letter-spacing: -.1em;
+        }
+
+        .footer span.right {
+            display: inline-block;
+            float: right;
+        }
+    </style>
 </head>
-<style>
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    background: url(./paopao2.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-html,
-body {
-    margin: 0 auto;
-    font-size: calc(1vw + 1vh + .5vmin);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.dagashi {
-    text-align: center;
-    color: green;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.dagashi>aside {
-    letter-spacing: -.2em;
-    text-shadow: none;
-    color: black;
-    font-size: x-small;
-}
-
-.dagashi>div:nth-of-type(1) {
-    text-shadow:
-        yellow -3px -3px 0px,
-        yellow 2px 2px 0px,
-        lightcoral 8px 5px 0px,
-        hotpink 6px 3px 0px,
-        pink 3px 1px 0px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    font-size: 4.5em;
-}
-
-.dagashi>div:nth-of-type(2) {
-    text-shadow:
-        yellow -3px -3px 0px,
-        yellow 2px 2px 0px,
-        lightcoral 8px 5px 0px,
-        hotpink 6px 3px 0px,
-        pink 3px 1px 0px;
-    font-weight: 900;
-    font-size: 3em;
-    margin-top: -1.2em;
-}
-
-.banana {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 100;
-    display: grid;
-    grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(10, 10%);
-}
-
-.banana .star {
-    position: relative;
-}
-
-.banana .star::before {
-    content: "✦✧✨";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    background: transparent;
-    transform: scale3d(0, 0, 1);
-    transition: .5s visibility ease, .5s transform ease-in-out, .5s background ease-in-out;
-    visibility: hidden;
-    background-image: linear-gradient(to right, green, linen, indianred, lemonchiffon);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-size: 200% 100%;
-    animation: letsgo 2s infinite linear;
-}
-
-.banana .star:hover::before {
-    visibility: visible;
-    transform: scale3d(1, 1, .5) rotate(46deg);
-    transition: 0s transform;
-}
-
-@keyframes letsgo {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: -100% 0;
-    }
-}
-
-.banana .star:hover::first-line {
-    color: lightcoral;
-    text-shadow: yellow -3px -3px 1px;
-}
-
-.shikada {
-    width: 100%;
-    text-shadow: none;
-    height: 3em;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    z-index: 101;
-    white-space: nowrap;
-    word-break: keep-all;
-    margin-top: -.5em;
-}
-
-.shikada .apple {
-    display: inline-block;
-    width: 33.3%;
-}
-
-.shikada .apple a {
-    color: white;
-    letter-spacing: -1px;
-    -webkit-text-stroke: 1px black;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.shikada .apple a::before {
-    z-index: 2;
-    font-size: 1em;
-}
-
-.apple1 a::before {
-    content: "⌂";
-}
-
-.shikada .apple2 a::before {
-    content: "🞔";
-}
-
-.apple3 a::before {
-    content: "✉";
-}
-
-.gulugulu {
-    white-space: nowrap;
-    padding: .4em;
-    position: relative;
-    display: inline-block;
-    width: 200%;
-    animation: 7s hotaru linear infinite normal;
-}
-
-.gachagacha {
-    animation: 6s hotaru linear infinite normal;
-}
-
-@keyframes hotaru {
-    0% {
-        left: 0;
-    }
-
-    100% {
-        left: -100%;
-    }
-}
-
-.gulugulu h4,
-.gulugulu h3,
-.gulugulu h2,
-.gulugulu h1 {
-    overflow: hidden;
-    display: inline-block;
-    /*float: left;*/
-}
-
-.gulugulu h4 {
-    width: 10%;
-}
-
-.gulugulu h3 {
-    width: 10%;
-}
-
-.gulugulu h2 {
-    width: 12.5%;
-}
-
-.gulugulu h1 {
-    width: 16.6%;
-}
-
-.gulugulu h4:nth-child(1),
-.gulugulu h4:nth-child(6),
-.gulugulu h3:nth-child(2),
-.gulugulu h3:nth-child(7),
-.gulugulu h2:nth-child(1),
-.gulugulu h2:nth-child(7),
-.gulugulu h1:nth-child(3),
-.gulugulu h1:nth-child(7) {
-    color: hotpink;
-}
-
-.gulugulu h4:nth-child(2),
-.gulugulu h4:nth-child(7),
-.gulugulu h3:nth-child(3),
-.gulugulu h3:nth-child(8),
-.gulugulu h2:nth-child(2),
-.gulugulu h2:nth-child(8),
-.gulugulu h1:nth-child(4),
-.gulugulu h1:nth-child(1) {
-    color: purple;
-}
-
-.gulugulu h4:nth-child(3),
-.gulugulu h4:nth-child(8),
-.gulugulu h3:nth-child(4),
-.gulugulu h3:nth-child(10),
-.gulugulu h2:nth-child(6),
-.gulugulu h1:nth-child(5) {
-    color: firebrick;
-}
-
-.gulugulu h4:nth-child(4),
-.gulugulu h4:nth-child(10),
-.gulugulu h3:nth-child(5),
-.gulugulu h2:nth-child(4) {
-    color: gold;
-}
-
-.gulugulu h2:nth-child(3),
-.gulugulu h1:nth-child(2) {
-    color: mediumturquoise;
-}
-
-.gulugulu *::after {
-    content: "🟄";
-    color: bisque;
-    position: absolute;
-    /*font-size: 1px;*/
-    font-size: xx-small;
-    top: 3px;
-    width: 4px;
-    height: 4px;
-    text-shadow: 4px 4px magenta, -32px -55px 1px antiquewhite, -22px -100px magenta, -88px -66px antiquewhite, 467px 187px darkred, 264px 943px magenta, 877px 783px magenta, 165px 315px magenta, 1990px 757px magenta, 1557px 1040px magenta, 581px 612px magenta, 183px 1014px magenta, 59px 1691px magenta;
-    animation: backorai 8s linear infinite;
-}
-
-@keyframes backorai {
-    0% {
-        transform: translateX(0px) translateY(0px);
-    }
-
-    50% {
-        transform: translateX(1000px) translateY(-20px);
-
-    }
-
-    100% {
-        transform: translateX(2000px) translateY(0px);
-    }
-}
-
-.owari {
-    position: relative;
-    letter-spacing: -.1em;
-    overflow: hidden;
-}
-
-.footer {
-	position: relative;
-    height: inherit;
-    text-shadow: none;
-    color: black;
-    font-size: x-small;
-    font-weight: 550;
-    letter-spacing: -.1em;
-}
-
-.footer span.right {
-	display: inline-block;
-    float: right;
-}
-</style>
 
 <body>
     <header class="dagashi">
@@ -312,9 +319,11 @@ body {
         <br />
         <div>ホームページ</div>
         <nav class="shikada">
-            <li class="apple apple1"><a href="#">HOME</a></li>
-            <li class="apple apple2"><a href="#">コンテンツ</a></li>
-            <li class="apple apple3"><a href="#">お問い合わせ</a></li>
+            <ul style="list-style:none;padding:0;margin:0;">
+                <li class="apple apple1"><a href="#">HOME</a></li>
+                <li class="apple apple2"><a href="#">コンテンツ</a></li>
+                <li class="apple apple3"><a href="#">お問い合わせ</a></li>
+            </ul>
         </nav>
         <div class="owari">
             <div id="stars">✦</div>
@@ -378,106 +387,106 @@ body {
         </div>
     </header>
     <section class="banana">
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
-        <aside class="star"></aside>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
     </section>
 </body>
 

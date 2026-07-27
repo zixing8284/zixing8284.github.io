@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 * {
   margin: 0;
@@ -48,9 +48,10 @@ h1.cover-heading {
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  background: url(brand.jpeg) no-repeat;
+  background: url(brand.webp) no-repeat;
   background-size: cover;
-  color: rgba(1, 1, 1, 0);
+  text-indent: -9999px;
+  overflow: hidden;
   white-space: nowrap;
   font-size: 10px;
 }
@@ -70,14 +71,6 @@ h1.cover-heading {
   padding: 0 20px;
 }
 @media (min-width: 768px) {
-  .masthead-nav > li > a {
-    color: #fdfdfd;
-  }
-  .mastfoot {
-    position: absolute;
-    bottom: 0;
-    color: #fdfdfd;
-  }
   .lead {
     font-size: 20px;
   }
@@ -96,7 +89,7 @@ h1.cover-heading {
     color: #fdfdfd;
     display: flex;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-    background: url(raster.png) repeat;
+    background: url(raster.webp) repeat;
     background-color: rgba(1, 1, 1, 0.3);
     border: 2.61em solid #111;
     border-width: 2.61em 0.39em;
@@ -107,10 +100,6 @@ h1.cover-heading {
   }
   .masthead-brand {
     display: none;
-  }
-  .masthead-nav {
-    height: 36px;
-    float: left;
   }
   h1.cover-heading {
     border-bottom: 3px solid;
